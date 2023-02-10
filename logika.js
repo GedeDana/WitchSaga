@@ -61,15 +61,20 @@ class WitchSaga {
 
     averageKilled() {
   
+      if(this.numberPepoleKilledOnResult.length == 0)  {
+         return console.log("Value still null");
+      } else {
+
         let avgkilled = this.numberPepoleKilledOnResult.reduce(function (a, b) {
             return  (a + b)/2;
             
         });
         return console.log("Averange killed is ",avgkilled );
+      }
+       
     }
 
 }
 
 var witch  = new WitchSaga(3,[10,13],[12,17]);
-
 witch.YearsKilled();
